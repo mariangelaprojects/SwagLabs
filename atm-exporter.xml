@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10001</projectId>
+    <projectKey>SLAB</projectKey>
+    <exportDate>2022-12-13 00:46:36 UTC</exportDate>
+    <folders>
+        <folder fullPath="Login" index="0"/>
+    </folders>
+    <testCases>
+        <testCase id="76788894" key="SLAB-T1">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Mariangela Santos</createdBy>
+            <createdOn>2022-12-11 19:37:36 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente sem cadastro deseja criar uma conta]]></name>
+            <objective><![CDATA[Verificar funcionalidade de cadastro]]></objective>
+            <owner>63960a1276fb74a95141cac2</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o cliente esteja na tela de login 
+
+And não esteja cadastrado no sistema
+
+When clica em ‘criar conta’
+
+Then será redirecionado para uma tela de criação de nova conta]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="76886384" key="SLAB-T2">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Mariangela Santos</createdBy>
+            <createdOn>2022-12-12 23:38:55 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente cadastrado deseja redefinir a senha]]></name>
+            <objective><![CDATA[Verificar funcionalidade de redefinir senha]]></objective>
+            <owner>63960a1276fb74a95141cac2</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o cliente esteja na tela de login 
+
+And não lembre sua senha
+
+When clica em ‘Esqueceu sua senha?’
+
+Then será redirecionado para uma tela de redefinição de senha]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="76886389" key="SLAB-T3">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Mariangela Santos</createdBy>
+            <createdOn>2022-12-12 23:41:09 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente cadastrado deseja efetuar login com password incorreta]]></name>
+            <objective><![CDATA[Verificar funcionalidade de valida&ccedil;&atilde;o de senha]]></objective>
+            <owner>63960a1276fb74a95141cac2</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar url: https://www.saucedemo.com/<br /><br />]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio deve visualizar tela de login&nbsp;]]></expectedResult>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita username no campo 'username']]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio consegue digitar no campo]]></expectedResult>
+                        <testData><![CDATA[standard_user ]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita password no campo 'password']]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio n&atilde;o consegue digitar no campo]]></expectedResult>
+                        <testData><![CDATA[123456]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio clica no bot&atilde;o Login]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio n&atilde;o consegue efetivar o login e &eacute; apresentado a mensagem: 'Epic sadface: Username and password do not match any user in this service']]></expectedResult>
+                        <testData><![CDATA[]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="76886452" key="SLAB-T4">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Mariangela Santos</createdBy>
+            <createdOn>2022-12-12 23:50:11 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente cadastrado deseja efetuar login com password correta]]></name>
+            <objective><![CDATA[Verificar funcionalidade de valida&ccedil;&atilde;o de senha]]></objective>
+            <owner>63960a1276fb74a95141cac2</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar url: https://www.saucedemo.com/<br /><br />]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio deve visualizar tela de login&nbsp;]]></expectedResult>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita username no campo 'username']]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio consegue digitar no campo]]></expectedResult>
+                        <testData><![CDATA[standard_user ]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita password no campo 'password']]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio n&atilde;o consegue digitar no campo]]></expectedResult>
+                        <testData><![CDATA[secret_sauce ]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Clicar no bot&atilde;o Login]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio deve visualizar tela de Products]]></expectedResult>
+                        <testData><![CDATA[]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="76886459" key="SLAB-T5">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Mariangela Santos</createdBy>
+            <createdOn>2022-12-12 23:51:29 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente cadastrado deseja efetuar login com username incorreta]]></name>
+            <objective><![CDATA[Verificar funcionalidade de valida&ccedil;&atilde;o de login]]></objective>
+            <owner>63960a1276fb74a95141cac2</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar url: https://www.saucedemo.com/<br /><br />]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio deve visualizar tela de login&nbsp;]]></expectedResult>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita username no campo 'username']]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio consegue digitar no campo]]></expectedResult>
+                        <testData><![CDATA[standard]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita password no campo 'password']]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio n&atilde;o consegue digitar no campo]]></expectedResult>
+                        <testData><![CDATA[secret_sauce ]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio clica no bot&atilde;o Login]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio n&atilde;o consegue efetivar o login e &eacute; apresentado a mensagem: 'Epic sadface: Username and password do not match any user in this service']]></expectedResult>
+                        <testData><![CDATA[]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="76886491" key="SLAB-T6">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Mariangela Santos</createdBy>
+            <createdOn>2022-12-12 23:58:04 UTC</createdOn>
+            <customFields/>
+            <folder><![CDATA[Login]]></folder>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Cliente cadastrado deseja efetuar login e logout]]></name>
+            <objective><![CDATA[Verificar funcionalidade de login e logout]]></objective>
+            <owner>63960a1276fb74a95141cac2</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Approved]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar url: https://www.saucedemo.com/<br /><br />]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio deve visualizar tela de login&nbsp;]]></expectedResult>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita username no campo 'username']]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio consegue digitar no campo]]></expectedResult>
+                        <testData><![CDATA[standard_user ]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio digita password no campo 'password']]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio n&atilde;o consegue digitar no campo]]></expectedResult>
+                        <testData><![CDATA[secret_sauce ]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio clica no bot&atilde;o Login]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio consegue efetivar o login e &eacute; apresentado a tela de Products ]]></expectedResult>
+                        <testData><![CDATA[]]></testData>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[Usu&aacute;rio clica no meu : logout]]></description>
+                        <expectedResult><![CDATA[Usu&aacute;rio deve visualizar a tela de login]]></expectedResult>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
